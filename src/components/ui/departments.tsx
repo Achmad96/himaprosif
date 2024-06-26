@@ -5,6 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 
 import React from 'react';
 import { DEPARTMENTS_DATA } from '@/constants/departments-data';
+import { URL_FILE } from '@/constants/urls';
 
 interface DepartmentCardProps {
   name: string;
@@ -31,7 +32,7 @@ function DepartmentCard({ name, icon, parentClassName, childClassName }: Departm
 }
 
 const noto_sans = Noto_Sans({ weight: '800', subsets: ['latin'] });
-const URL = process.env.NEXT_PUBLIC_IMAGES_URL as string;
+const URL = URL_FILE;
 export default function Departments() {
   return (
     <section

@@ -1,10 +1,11 @@
 import Markdown from 'react-markdown';
-import { notFound } from 'next/navigation';
 
 import { type BlurImageDataType, getBlurData } from '@/app/actions';
 import { type SingleBlogPageResponseType, getSingleBlogPage } from '@/utils/notion-service';
-import { ImageContainer, ImageWithBlur } from '@/components/ui/image-component';
 import { type BlogType } from '@/types';
+
+import { notFound } from 'next/navigation';
+import { ImageContainer, ImageWithBlur } from '@/components/ui/image-component';
 
 export const revalidate = 600; // revalidate the data every 10 minutes
 export const dynamicParams = true;
