@@ -24,7 +24,9 @@ export default function Navbar() {
             <ul className="menu menu-horizontal">
               {/* Navbar menu content here */}
               {navigationsList.map((link: NavigationsListType) => (
-                <NavigationComponent key={link.path} link={link} />
+                <li key={link.path}>
+                  <Link href={link.path}>{link.name}</Link>
+                </li>
               ))}
             </ul>
           </div>
