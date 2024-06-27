@@ -82,8 +82,7 @@ const DEPARTMENTS_DATA: DepartmentsType = {
   },
   msdm: {
     title: 'Manajemen Sumber Daya Manusia',
-    description:
-      'MANAJEMEN SUMBER DAYA MANUSIA adalah departemen yang berperan dalam terwujudnya mahasiswa sistem informasi yang berkarakter dan berprestasi baik akademik maupun non akademik, yang mampu bersosialisasi dengan menerapkan ilmu pengetahuan.',
+    description: 'MANAJEMEN SUMBER DAYA MANUSIA adalah departemen yang berperan dalam terwujudnya mahasiswa sistem informasi yang berkarakter dan berprestasi baik akademik maupun non akademik.',
     logo: '12Dt51eQAOuxd2xfHkPi88NQq3rXL8zV2',
     group: '1tqhpcVldz5PnPTuA5W1ogvbA2BmKB9Sn',
     members: [
@@ -134,7 +133,7 @@ const DEPARTMENTS_DATA: DepartmentsType = {
   pa: {
     title: 'Pengembangan Akademik',
     description:
-      'PENGEMBANGAN AKADEMIK adalah departemen yang berperan untuk meningkatkan mutu pendidikan dan pengalaman akademik para mahasiswa, memberikan dukungan kepada mahasiswa dalam mencapai keberhasilan akademis. Dengan fokus pada pemahaman mendalam terhadap kurikulum dan tuntutan akademis, Departemen Pengembangan Akademik membantu mahasiswa mencapai prestasi maksimal dan meraih kesuksesan dalam perkembangan akademis mahasiswa.',
+      'PENGEMBANGAN AKADEMIK adalah departemen yang berperan untuk meningkatkan mutu pendidikan dan pengalaman akademik para mahasiswa, memberikan dukungan kepada mahasiswa dalam mencapai keberhasilan akademis.',
     logo: '1mxXToOQdvx9Lc1yORpppl4nYeNYKFBtA',
     group: '11ZZhnPmTCfHoISfu018kCsM63NgqoTmQ',
     members: [
@@ -149,8 +148,7 @@ const DEPARTMENTS_DATA: DepartmentsType = {
   },
   ti: {
     title: 'Teknologi Informasi',
-    description:
-      'TEKNOLOGI INFORMASI adalah departemen yang berperan dalam mengelola dan memberikan informasi serta mengkomunikasikan kegiatan ke dalam bentuk kreatif desain dan video. TI sekaligus juga bertanggung jawab dalam pemeliharaan dan pengembangan situs web Himaprosif.',
+    description: 'TEKNOLOGI INFORMASI adalah departemen yang berperan dalam mengelola dan memberikan informasi serta mengkomunikasikan kegiatan ke dalam bentuk kreatif desain dan video.',
     logo: '1VY63ToMmFNZe1yE2iwXitGYXQkfVe-0f',
     group: '15PikTRFaEelS65ETp-ks9HB4m4JMDhoV',
     members: [

@@ -6,6 +6,7 @@ import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import { DEPARTMENTS_DATA } from '@/constants/departments-data';
 import { URL_FILE } from '@/constants/urls';
+import Link from 'next/link';
 
 interface DepartmentCardProps {
   name: string;
@@ -23,10 +24,12 @@ function DepartmentCard({ name, icon, parentClassName, childClassName }: Departm
       }}
       className={parentClassName}
     >
-      <div className={childClassName}>
-        <Image src={icon} alt={name} fill={true} sizes="(max-width: 640px) 30vw, (max-width: 768px) 40vw, (max-width: 1024px) 80vw, 100vw" loading="lazy" />
-      </div>
-      <p className="max-sm:text-sm">{name.toUpperCase()}</p>
+      <Link href={`/departments/${name}`} className="flex flex-col items-center gap-3 text-center">
+        <div className={childClassName}>
+          <Image src={icon} alt={name} fill={true} sizes="(max-width: 640px) 30vw, (max-width: 768px) 40vw, (max-width: 1024px) 80vw, 100vw" loading="lazy" />
+        </div>
+        <p className="max-sm:text-sm">{name.toUpperCase()}</p>
+      </Link>
     </motion.li>
   );
 }

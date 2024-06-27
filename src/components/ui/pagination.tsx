@@ -6,13 +6,14 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
 
 interface IPaginationComponents {
   blogs: BlogType[];
+  searchParams?: string;
   nextCursor: string | null;
   hasMore: boolean;
 }
 
 const PREV_CURSORS_NAME = 'previousCursors';
 
-export default function PaginationComponent({ blogs, nextCursor, hasMore }: IPaginationComponents) {
+export default function PaginationComponent({ blogs, nextCursor, hasMore, searchParams }: IPaginationComponents) {
   const router = useRouter();
   const startCursor = blogs[0]?.id || '';
   const [prevCursors, setPrevCursors] = useState<string[]>([]);
@@ -27,17 +28,20 @@ export default function PaginationComponent({ blogs, nextCursor, hasMore }: IPag
       localStorage.setItem(PREV_CURSORS_NAME, '[]');
     };
 
+    if (!searchParams) {
+      setPrevCursors([]);
+      handleDelete();
+      return;
+    }
+
     window.addEventListener('beforeunload', handleDelete);
     return () => window.removeEventListener('beforeunload', handleDelete);
   }, []);
 
   useEffect(() => {
-    setPrevCursors([]);
-    localStorage.setItem(PREV_CURSORS_NAME, '[]');
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(PREV_CURSORS_NAME, JSON.stringify(prevCursors));
+    if (!searchParams) {
+      localStorage.setItem(PREV_CURSORS_NAME, JSON.stringify(prevCursors));
+    }
   }, [prevCursors]);
 
   const handlePreviousClick = () => {

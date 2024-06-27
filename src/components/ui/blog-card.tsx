@@ -3,7 +3,7 @@ import { type BlurImageDataType, getBlurData } from '@/app/actions';
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 import Link from 'next/link';
-import TagComponent from './tag';
+import TagComponent from '@/components/ui/tag';
 import { ImageContainer, ImageWithBlur } from '@/components/ui/image-component';
 
 interface BlogCardProps {
@@ -19,7 +19,7 @@ export default async function BlogCard(props: BlogCardProps) {
       <Card className="relative flex h-auto w-full flex-col">
         <CardHeader className="flex gap-5">
           <ImageContainer className="relative h-[8rem] max-h-[8rem] min-h-[8rem] w-[15rem] min-w-[15rem] max-w-[15rem] max-lg:h-[6rem] max-lg:max-h-[6rem] max-lg:min-h-[6rem] max-lg:w-[10rem] max-lg:min-w-[10rem] max-lg:max-w-[10rem]">
-            <ImageWithBlur blurImageData={blurImageData} alt={title} fill={true} sizes="(max-width: 1024px) 100vw" />
+            <ImageWithBlur className="rounded-md" blurImageData={blurImageData} alt={title} fill={true} sizes="(max-width: 1024px) 100vw" />
           </ImageContainer>
           <div>
             <CardTitle className="max-lg:text-base max-sm:text-sm">{title}</CardTitle>
