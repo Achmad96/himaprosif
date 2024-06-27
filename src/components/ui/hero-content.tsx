@@ -69,7 +69,7 @@ export default function HeroContent() {
           animate={{
             opacity: 1,
           }}
-          className="py-6"
+          className="py-6 text-justify"
         >
           Menjadikan HIMAPROSIF sebagai pilar utama mahasiswa di Program Studi Sistem Informasi yang bertujuan untuk menciptakan organisasi yang aktif, kreatif dan inovatif dalam rangka menciptakan
           generasi yang profesional, religius dan berkualitas untuk berkontribusi kepada masyarakat.
@@ -79,7 +79,7 @@ export default function HeroContent() {
         <motion.h1 initial={'closed'} animate={'open'} variants={heroContentVariants} className="text-5xl font-extrabold text-primary max-xl:text-4xl max-lg:text-3xl max-md:text-2xl max-sm:text-xl">
           Misi
         </motion.h1>
-        <motion.ul initial={'closed'} animate={'open'} variants={heroContentVariants} className="ml-5 flex flex-col gap-2 py-6">
+        <motion.ul initial={'closed'} animate={'open'} variants={heroContentVariants} className="ml-5 flex flex-col gap-2 py-6 text-justify">
           <motion.li variants={itemVariants}>Membangun hubungan secara internal dan eksternal untuk menciptakan lingkungan sosial yang baik dan rasa kekeluargaan.</motion.li>
           <motion.li variants={itemVariants}>
             Meningkatkan semangat silaturahmi atas dasar kekeluargaan dan religius Membangun kreativitas dan inovasi yang secara aktif mencari solusi atas kebutuhan Program Studi Sistem Informasi.
