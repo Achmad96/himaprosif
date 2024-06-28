@@ -1,14 +1,11 @@
-import { getPublishedBlogs } from '@/utils/notion-service';
 import type { BlogType } from '@/types';
+import { getPublishedBlogs } from '@/utils/notion-service';
 
 import BlogCard from '@/components/ui/blog-card';
 import PaginationComponent from '@/components/ui/pagination';
+import { isValidUUID } from '@/utils/format-util';
 
 const BLOG_PER_PAGE = 3;
-
-const isValidUUID = (uuid: string | null): boolean => {
-  return uuid ? uuid.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)?.length === 1 : false;
-};
 
 export default async function Blogs({ searchParams }: { searchParams: { startCursor: string } }) {
   const { startCursor } = searchParams;

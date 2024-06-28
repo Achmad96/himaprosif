@@ -1,7 +1,8 @@
+import type { AuthorType, BlogFormType, BlogType, TagType } from '@/types';
+
 import { Client } from '@notionhq/client';
 import { cache } from 'react';
 import { NotionToMarkdown } from 'notion-to-md';
-import type { AuthorType, BlogFormType, BlogType, TagType } from '@/types';
 import { MdStringObject } from 'notion-to-md/build/types';
 import { formatDate, formatDescription } from '@/utils/format-util';
 
@@ -56,6 +57,7 @@ const getPublishedBlogs = cache(async (pageSize: number, startCursor: string | u
       },
     ],
   });
+
   const blogs = await Promise.all(response.results.map(transformPageToBlogForm));
   const { has_more, next_cursor } = response;
   return {

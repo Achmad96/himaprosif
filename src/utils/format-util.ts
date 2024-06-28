@@ -1,4 +1,4 @@
-function formatDescription(description: any): string {
+const formatDescription = (description: any): string => {
   description = description.rich_text.map((word: any) => word.plain_text).join('');
   const words = description.split(' ');
   const wordLimit = 100,
@@ -15,14 +15,19 @@ function formatDescription(description: any): string {
     truncatedDescription = truncatedByChars.slice(0, lastSpaceIndex) + '...';
   }
   return truncatedDescription;
-}
-function formatDate(date: string): string {
+};
+
+const formatDate = (date: string): string => {
   const currentDate = new Date(date);
   return currentDate.toLocaleDateString('id-ID', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   });
-}
+};
 
-export { formatDescription, formatDate };
+const isValidUUID = (uuid: string | null): boolean => {
+  return uuid ? uuid.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)?.length === 1 : false;
+};
+
+export { formatDescription, formatDate, isValidUUID };

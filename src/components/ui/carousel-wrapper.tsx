@@ -28,7 +28,7 @@ export default function CarouselDemo() {
                 }}
               >
                 <div className="flex flex-col items-center">
-                  <h1 className={`text-5xl font-extrabold uppercase ${raleway.className}`}>{content.title}</h1>
+                  <h1 className={`text-5xl font-extrabold uppercase max-md:text-2xl ${raleway.className}`}>{content.title}</h1>
                   <p className="bold text-lg">{content?.subtitle}</p>
                 </div>
               </CardContent>
