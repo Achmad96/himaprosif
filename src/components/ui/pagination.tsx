@@ -19,21 +19,15 @@ export default function PaginationComponent({ blogs, nextCursor, hasMore, search
   const [prevCursors, setPrevCursors] = useState<string[]>([]);
 
   useEffect(() => {
-    if (!window) return;
-    const storedCursors = localStorage.getItem(PREV_CURSORS_NAME);
-    const data = storedCursors ? JSON.parse(storedCursors) : [];
-    setPrevCursors(data);
-
-    const handleDelete = () => {
-      localStorage.setItem(PREV_CURSORS_NAME, '[]');
-    };
-
+    const items: string[] = JSON.parse(localStorage.getItem(PREV_CURSORS_NAME) as string);
+    if (items) setPrevCursors(items);
     if (!searchParams) {
-      setPrevCursors([]);
-      handleDelete();
+      setPrevCursors((_) => []);
+      localStorage.setItem(PREV_CURSORS_NAME, '[]');
       return;
     }
 
+    const handleDelete = () => localStorage.setItem(PREV_CURSORS_NAME, '[]');
     window.addEventListener('beforeunload', handleDelete);
     return () => window.removeEventListener('beforeunload', handleDelete);
   }, []);

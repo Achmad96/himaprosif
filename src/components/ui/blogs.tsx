@@ -13,9 +13,11 @@ export default async function Blogs({ searchParams }: { searchParams: { startCur
   const { blogs, hasMore, nextCursor } = response;
   return (
     <>
-      {blogs.map((blog: BlogType) => {
-        return <BlogCard key={blog.id} blog={blog} />;
-      })}
+      <div className="flex h-[90%] w-full flex-col items-center justify-center gap-5">
+        {blogs.map((blog: BlogType) => {
+          return <BlogCard key={blog.id} blog={blog} />;
+        })}
+      </div>
       <PaginationComponent searchParams={startCursor} blogs={blogs} hasMore={hasMore} nextCursor={nextCursor} />
     </>
   );

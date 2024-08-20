@@ -24,7 +24,7 @@ function DepartmentCard({ name, icon, parentClassName, childClassName }: Departm
       }}
       className={parentClassName}
     >
-      <Link href={`/departments/${name}`} className="flex flex-col items-center gap-3 text-center">
+      <Link href={`/departments/${name}`} className="flex h-full w-full flex-col items-center justify-center gap-3 text-center">
         <div className={childClassName}>
           <Image src={icon} alt={name} fill={true} sizes="(max-width: 640px) 30vw, (max-width: 768px) 40vw, (max-width: 1024px) 80vw, 100vw" loading="lazy" />
         </div>

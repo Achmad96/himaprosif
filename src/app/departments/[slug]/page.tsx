@@ -11,9 +11,6 @@ const URL = URL_FILE as string;
 const departmentStyle: any = {
   ti: ['w-1/2'],
   auditor: ['w-1/2'],
-  bpi: ['w-3/5'],
-  msdm: ['w-3/5'],
-  kki: ['w-3/5'],
 };
 
 const descriptionStyle: any = {
@@ -21,9 +18,6 @@ const descriptionStyle: any = {
   auditor: ['w-1/2'],
   bpi: ['w-3/5'],
   msdm: ['w-3/5'],
-  kki: ['w-3/4'],
-  pmdb: ['w-3/4'],
-  pb: ['w-3/5'],
 };
 
 const Header = ({ children, slug, department }: { children: React.ReactNode; slug: string; department: DepartmentType }) => {
@@ -45,7 +39,7 @@ const Description = ({ slug, department }: { slug: string; department: Departmen
   const { logo, description } = department;
   const descId = '1ahzLmOvg8CcSn3nOMIpumLiGslQ2zAQI';
   return (
-    <div className={`absolute h-1/2 ${descriptionStyle[slug] ? descriptionStyle[slug]?.[0] : 'w-3/4'} -bottom-32 max-xl:-bottom-24 max-lg:w-[80%] max-sm:-bottom-28 max-sm:h-full max-sm:w-[110%]`}>
+    <div className={` absolute h-1/2 ${descriptionStyle[slug] ? descriptionStyle[slug]?.[0] : 'w-3/4'} -bottom-32 max-xl:-bottom-24 max-lg:w-[80%] max-sm:-bottom-28 max-sm:h-full max-sm:w-[110%]`}>
       <Image src={`${URL}&id=${descId}`} alt="background-description" fill={true} sizes="(max-width: 1024px) 100vw" />
       <div className="absolute flex h-full w-full items-center justify-center gap-20 max-lg:gap-10">
         <div className="relative h-20 w-20 brightness-0 max-md:h-12 max-md:w-12">

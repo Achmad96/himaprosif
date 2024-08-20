@@ -1,6 +1,6 @@
-import SocialMedia from '@/components/layouts/footer/social-media.footer';
-import Location from '@/components/layouts/footer/location.footer';
-import Contact from '@/components/layouts/footer/contact-form.footer';
+import SocialMedia from '@/components/layout/footer/social-media.footer';
+import Location from '@/components/layout/footer/location.footer';
+import Contact from '@/components/layout/footer/contact-form.footer';
 
 export default function Footer() {
   return (

@@ -3,8 +3,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { ReactElement } from 'react';
-import Navbar from '@/components/layouts/Navbar';
-import Footer from '@/components/layouts/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 const poppins = Poppins({ weight: '500', subsets: ['latin'] });
 
