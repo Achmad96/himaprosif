@@ -1,4 +1,4 @@
-import Wrapper from '@/components/layouts/Wrapper';
+import Wrapper from '@/components/layout/Wrapper';
 import Hero from '@/components/ui/hero';
 import Departments from '@/components/ui/departments';
 import Carousel from '@/components/ui/carousel-wrapper';
